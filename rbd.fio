@@ -1,0 +1,13 @@
+[global]
+description="write test with block size of 4M"
+ioengine=rbd
+clientname=admin
+pool=rbdbench
+rbdname=image01
+rw=randwrite
+bs=4M
+[rbd_iodepth128]
+iodepth=128
+numjobs=4
+file_service_type=normal
+random_distribution=zipf:2
